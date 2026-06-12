@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Методист — портфолио</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #F7F5F0;
+  --white: #FFFFFF;
+  --gray-100: #F0EEE9;
+  --gray-200: #DDD9D0;
+  --gray-400: #9A9690;
+  --gray-600: #5C5852;
+  --graphite: #2A2825;
+  --accent: #1B3F6E;
+  --accent-light: #E8EFF8;
+  --accent-mid: #2D5FA0;
+  --emerald: #0F6E56;
+  --emerald-light: #E1F5EE;
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--graphite);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--graphite);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--graphite); }
+
+.nav-cta {
+  background: var(--accent);
+  color: var(--white) !important;
+  padding: 8px 18px;
+  border-radius: var(--r-sm);
+  font-weight: 500 !important;
+}
+
+/* SECTIONS */
+section { padding: 96px 40px; }
+.container { max-width: 1140px; margin: 0 auto; }
+
+/* HERO */
+#hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 40px;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.hero-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--accent-mid);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent-mid);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--graphite);
+  margin-bottom: 28px;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: var(--gray-600);
+  max-width: 480px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+.hero-kpi-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.hero-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-kpi-num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--graphite);
+  letter-spacing: -0.03em;
+}
+
+.hero-kpi-label {
+  font-size: 12px;
+  color: var(--gray-400);
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: var(--r-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.88; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--graphite);
+  padding: 14px 28px;
+  border-radius: var(--r-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  border: 1px solid var(--gray-200);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-ghost:hover { border-color: var(--gray-400); background: var(--gray-100); }
+
+/* Pipeline visual */
+.pipeline-card {
+  background: var(--gray-100);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  border: 1px solid var(--gray-200);
+}
+
+.pipeline-title {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.pipeline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pipeline-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  transition: transform 0.15s, border-color 0.15s;
+  cursor: default;
+}
+
+.pipeline-step:hover {
+  transform: translateX(4px);
+  border-color: var(--accent);
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--accent);
+  min-width: 20px;
+}
+
+.step-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; }
+
+.step-info { flex: 1; }
+
+.step-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--graphite);
+  line-height: 1.3;
+}
+
+.step-sub {
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+.step-arrow {
+  color: var(--gray-200);
+  font-size: 12px;
+}
+
+.pipeline-connector {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0 0 32px;
+}
+
+.pipeline-connector svg { width: 12px; height: 10px; stroke: var(--gray-200); fill: none; stroke-width: 1; }
+
+/* SECTION HEADERS */
+.section-tag {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-mid);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: var(--accent-mid);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--graphite);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: 15px;
+  color: var(--gray-600);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* APPROACH */
+#approach { background: var(--white); }
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 56px;
+}
+
+.approach-roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.roadmap-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.roadmap-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 44px;
+  bottom: -12px;
+  width: 1px;
+  background: var(--gray-200);
+}
+
+.roadmap-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.roadmap-dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.roadmap-dot svg { width: 16px; height: 16px; stroke: var(--gray-400); fill: none; stroke-width: 1.5; stroke-linecap: round; }
+.roadmap-dot.active svg { stroke: var(--white); }
+
+.roadmap-content {
+  padding: 6px 0 24px;
+}
+
+.roadmap-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--graphite);
+}
+
+.roadmap-sub {
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+.approach-artifacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.artifact-card {
+  background: var(--gray-100);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  border: 1px solid var(--gray-200);
+  transition: border-color 0.2s;
+  cursor: default;
+}
+
+.artifact-card:hover { border-color: var(--accent); }
+
+.artifact-tag {
+  font-size: 10px;
+  color: var(--accent-mid);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.artifact-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--graphite);
+  margin-bottom: 4px;
+}
+
+.artifact-desc {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* CASES */
+#cases { background: var(--cream); }
+
+.cases-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.case-card {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+}
+
+.case-card:hover { border-color: var(--accent); }
+
+.case-header {
+  padding: 32px 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 40px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.case-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--graphite);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.case-desc {
+  font-size: 14px;
+  color: var(--gray-600);
+  max-width: 540px;
+}
+
+.case-kpis {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.case-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  background: var(--gray-100);
+  border-radius: var(--r-md);
+}
+
+.case-kpi-num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--graphite);
+  letter-spacing: -0.03em;
+}
+
+.case-kpi-label {
+  font-size: 11px;
+  color: var(--gray-400);
+}
+
+.case-body {
+  padding: 32px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.case-step {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-step-label {
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.case-step-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--graphite);
+}
+
+.case-step-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-step-items li {
+  font-size: 13px;
+  color: var(--gray-600);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.case-step-items li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gray-200);
+}
+
+.insight-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--emerald-light);
+  color: var(--emerald);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  margin-bottom: 6px;
+}
+
+.insight-chip::before {
+  content: '↗';
+  font-size: 10px;
+}
+
+/* DATA VIZ inside cases */
+.case-viz {
+  background: var(--gray-100);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.viz-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gray-400);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.bar-name {
+  font-size: 12px;
+  color: var(--gray-600);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+  transition: width 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+.bar-fill.secondary { background: var(--emerald); }
+
+.bar-val {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--graphite);
+  min-width: 36px;
+  text-align: right;
+}
+
+/* BLOOM TAXONOMY */
+.taxonomy-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.tax-chip {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.tax-1 { background: #EEF4FB; color: #1B3F6E; border-color: #C5D8F0; }
+.tax-2 { background: #E8F5EE; color: #0F6E56; border-color: #9FE1CB; }
+.tax-3 { background: #FEF4E8; color: #8A4F0B; border-color: #FAC775; }
+.tax-4 { background: #F5EEF8; color: #6B3FA0; border-color: #D4A8F0; }
+
+/* IN DEVELOPMENT */
+.in-dev-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FEF4E8;
+  color: #8A4F0B;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid #FAC775;
+  margin-bottom: 14px;
+}
+
+.in-dev-banner::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #EF9F27;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* COMPETENCIES */
+#competencies { background: var(--white); }
+
+.comp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.comp-card {
+  background: var(--gray-100);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  border: 1px solid var(--gray-200);
+  transition: transform 0.15s, border-color 0.2s;
+}
+
+.comp-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.comp-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-sm);
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.comp-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+.comp-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--graphite);
+  margin-bottom: 6px;
+}
+
+.comp-desc {
+  font-size: 12px;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+.comp-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.comp-tag {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 100px;
+  background: var(--white);
+  color: var(--gray-600);
+  border: 1px solid var(--gray-200);
+}
+
+/* DASHBOARD */
+#dashboard { background: var(--cream); }
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.dash-card {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  border: 1px solid var(--gray-200);
+}
+
+.dash-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--graphite);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.dash-num span {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.dash-label {
+  font-size: 13px;
+  color: var(--gray-400);
+  line-height: 1.4;
+}
+
+.dash-trend {
+  font-size: 11px;
+  color: var(--emerald);
+  font-weight: 500;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dash-trend::before { content: '↑'; }
+
+.dash-wide {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  border: 1px solid var(--gray-200);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.dash-section-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--graphite);
+  margin-bottom: 20px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.skill-label {
+  font-size: 13px;
+  color: var(--gray-600);
+  min-width: 160px;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--gray-100);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-mid));
+}
+
+.skill-pct {
+  font-size: 12px;
+  color: var(--gray-400);
+  min-width: 36px;
+  text-align: right;
+}
+
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--gray-100);
+  background: var(--gray-100);
+}
+
+.tool-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tool-name {
+  font-size: 13px;
+  color: var(--graphite);
+  font-weight: 500;
+}
+
+.tool-type {
+  font-size: 11px;
+  color: var(--gray-400);
+  margin-left: auto;
+}
+
+/* FOOTER */
+footer {
+  background: var(--graphite);
+  color: var(--white);
+  padding: 48px 40px;
+}
+
+.footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.footer-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--white); }
+
+/* UTILITY */
+.divider {
+  height: 1px;
+  background: var(--gray-200);
+  margin: 0 40px;
+}
+
+.highlight { color: var(--accent); }
+.hl-emerald { color: var(--emerald); }
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dot-blue { background: var(--accent); }
+.dot-green { background: var(--emerald); }
+.dot-amber { background: #EF9F27; }
+.dot-gray { background: var(--gray-400); }
+
+/* Scroll fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Методист</a>
+  <ul class="nav-links">
+    <li><a href="#approach">Подход</a></li>
+    <li><a href="#cases">Кейсы</a></li>
+    <li><a href="#competencies">Компетенции</a></li>
+    <li><a href="#dashboard">Результаты</a></li>
+    <li><a href="#contact" class="nav-cta">Связаться</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Методист образовательных программ</div>
+      <h1 class="hero-title">
+        Проектирую <em>образовательные продукты</em> на основе исследований, данных и потребностей аудитории
+      </h1>
+      <p class="hero-desc">
+        Превращаю сложный экспертный материал в чёткую структуру — от брифа до готовой программы. Работаю с данными, аудиторией и логикой обучения как единой системой.
+      </p>
+
+      <div class="hero-kpi-row">
+        <div class="hero-kpi">
+          <span class="hero-kpi-num">2</span>
+          <span class="hero-kpi-label">Разработанных<br>программы</span>
+        </div>
+        <div class="hero-kpi">
+          <span class="hero-kpi-num">6</span>
+          <span class="hero-kpi-label">Листов структуры<br>и логики</span>
+        </div>
+        <div class="hero-kpi">
+          <span class="hero-kpi-num">18+</span>
+          <span class="hero-kpi-label">Образовательных<br>результатов</span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#cases" class="btn-primary">Посмотреть кейсы</a>
+        <a href="#competencies" class="btn-ghost">Компетенции →</a>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <div class="pipeline-card">
+      <div class="pipeline-title">Процесс работы</div>
+      <div class="pipeline-steps">
+
+        <div class="pipeline-step">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="step-info">
+            <div class="step-name">Исследование</div>
+            <div class="step-sub">Бриф, аудитория, конкуренты</div>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="pipeline-connector">
+          <svg viewBox="0 0 12 10"><path d="M6 0 v10" stroke-dasharray="2 2"/></svg>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 3h18v5H3z"/><path d="M3 8h18v13H3z"/><path d="M8 21V8"/></svg>
+          </div>
+          <div class="step-info">
+            <div class="step-name">Анализ</div>
+            <div class="step-sub">Данные → инсайты → выводы</div>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="pipeline-connector">
+          <svg viewBox="0 0 12 10"><path d="M6 0 v10" stroke-dasharray="2 2"/></svg>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 17.5h7m-3.5-3.5v7"/></svg>
+          </div>
+          <div class="step-info">
+            <div class="step-name">Проектирование</div>
+            <div class="step-sub">Логика, структура, таксономия</div>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="pipeline-connector">
+          <svg viewBox="0 0 12 10"><path d="M6 0 v10" stroke-dasharray="2 2"/></svg>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-num">04</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4"/></svg>
+          </div>
+          <div class="step-info">
+            <div class="step-name">Разработка контента</div>
+            <div class="step-sub">Материалы, задания, тесты</div>
+          </div>
+          <div class="step-arrow">→</div>
+        </div>
+
+        <div class="pipeline-connector">
+          <svg viewBox="0 0 12 10"><path d="M6 0 v10" stroke-dasharray="2 2"/></svg>
+        </div>
+
+        <div class="pipeline-step" style="border-color: var(--accent); background: var(--accent-light);">
+          <div class="step-num" style="color: var(--accent);">05</div>
+          <div class="step-icon" style="background: rgba(255,255,255,0.7);">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="step-info">
+            <div class="step-name" style="color: var(--accent);">Результат</div>
+            <div class="step-sub">Запуск и итерации</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="container">
+    <div class="section-tag">Методология</div>
+    <h2 class="section-title">Подход к работе</h2>
+    <p class="section-desc">Каждая программа начинается не с тем, «что преподавать», а с вопроса «зачем» и «кому». Системное мышление от данных до готового продукта.</p>
+
+    <div class="approach-grid">
+      <div class="approach-roadmap">
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot active">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">Анализ брифа и целевой аудитории</div>
+            <div class="roadmap-sub">Входящие данные: заказчик, продукт, аудитория</div>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot active">
+            <svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">Исследование рынка и конкурентов</div>
+            <div class="roadmap-sub">Артефакт: таблица анализа конкурентов</div>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot active">
+            <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">Логика и методология программы</div>
+            <div class="roadmap-sub">Тип построения, педагогические технологии</div>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">Структура курса по модулям</div>
+            <div class="roadmap-sub">Темы, форматы, продолжительность, оценивание</div>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <div class="roadmap-dot">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">Разработка заданий и тестов</div>
+            <div class="roadmap-sub">Таксономия Блума, форматы оценивания</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="approach-artifacts">
+        <div class="artifact-card">
+          <div class="artifact-tag">Бриф</div>
+          <div class="artifact-name">Анализ брифа заказчика</div>
+          <div class="artifact-desc">Переформулировка целей, декомпозиция образовательных результатов</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-tag">Логика</div>
+          <div class="artifact-name">Тип логического построения</div>
+          <div class="artifact-desc">Спиральное, линейное, от результата — с обоснованием выбора</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-tag">Структура</div>
+          <div class="artifact-name">Программа по модулям</div>
+          <div class="artifact-desc">Цели, форматы, задания, таксономия, метрики завершения</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-tag">Оценивание</div>
+          <div class="artifact-name">Система тестирования</div>
+          <div class="artifact-desc">Формирующие и суммативные задания, уровни Блума</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-tag">SSDL</div>
+          <div class="artifact-name">Метрики и KPI</div>
+          <div class="artifact-desc">Показатели завершения, уровень вовлечённости, бизнес-результат</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-tag">Контент</div>
+          <div class="artifact-name">Материалы и референсы</div>
+          <div class="artifact-desc">Дополнительные ресурсы, форматы подачи, интерактивные элементы</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CASES -->
+<section id="cases">
+  <div class="container">
+    <div class="cases-header">
+      <div>
+        <div class="section-tag">Кейсы</div>
+        <h2 class="section-title">Разработанные программы</h2>
+      </div>
+    </div>
+
+    <!-- Case 1 -->
+    <div class="case-card fade-in">
+      <div class="case-header">
+        <div>
+          <div class="case-badge">✦ Онлайн-курс · Синхронный</div>
+          <h3 class="case-title">«Фотография для начинающих»</h3>
+          <p class="case-desc">Курс для Фабрики фото. Аудитория: новички, блогеры, SMM-специалисты, владельцы маркетплейсов. Задача — освоить ручной режим камеры, композицию и обработку с нуля.</p>
+          <div class="taxonomy-row">
+            <span class="tax-chip tax-1">Спиральная логика</span>
+            <span class="tax-chip tax-2">От результата + через опыт</span>
+            <span class="tax-chip tax-3">Смешанное обучение</span>
+            <span class="tax-chip tax-4">Синхронный онлайн</span>
+          </div>
+        </div>
+        <div class="case-kpis">
+          <div class="case-kpi">
+            <span class="case-kpi-num">5</span>
+            <span class="case-kpi-label">модулей</span>
+          </div>
+          <div class="case-kpi">
+            <span class="case-kpi-num">18</span>
+            <span class="case-kpi-label">образоват. результатов</span>
+          </div>
+          <div class="case-kpi">
+            <span class="case-kpi-num">7–8 ч</span>
+            <span class="case-kpi-label">нагрузка в неделю</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-step">
+          <div class="case-step-label">Задача</div>
+          <div class="case-step-title">Контекст и проблема</div>
+          <ul class="case-step-items">
+            <li>Аудитория снимает «на автомате» в авторежиме</li>
+            <li>Не знают, как управлять светом, диафрагмой, выдержкой</li>
+            <li>Хотят не нанимать фотографа, а снимать самостоятельно</li>
+          </ul>
+
+          <div class="case-viz">
+            <div class="viz-label">Аудитория по сегментам</div>
+            <div class="bar-row">
+              <div class="bar-name">Новички</div>
+              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+              <div class="bar-val">85%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Блогеры</div>
+              <div class="bar-track"><div class="bar-fill" style="width:62%"></div></div>
+              <div class="bar-val">62%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">SMM</div>
+              <div class="bar-track"><div class="bar-fill" style="width:48%"></div></div>
+              <div class="bar-val">48%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Маркетплейс</div>
+              <div class="bar-track"><div class="bar-fill" style="width:35%"></div></div>
+              <div class="bar-val">35%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step-label">Инсайты</div>
+          <div class="case-step-title">Ключевые находки</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
+            <div class="insight-chip">Нужна спиральная логика с усложнением</div>
+            <div class="insight-chip">Сначала настройки — потом композиция</div>
+            <div class="insight-chip">Обязателен пункт про обработку фото</div>
+            <div class="insight-chip">Предзапись + вебинары оптимально</div>
+          </div>
+
+          <div class="case-viz" style="margin-top: 16px;">
+            <div class="viz-label">Педагогические технологии</div>
+            <div class="bar-row">
+              <div class="bar-name">Видеоурок</div>
+              <div class="bar-track"><div class="bar-fill secondary" style="width:75%"></div></div>
+              <div class="bar-val">75%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Вебинар</div>
+              <div class="bar-track"><div class="bar-fill secondary" style="width:15%"></div></div>
+              <div class="bar-val">15%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-name">Лонгрид</div>
+              <div class="bar-track"><div class="bar-fill secondary" style="width:10%"></div></div>
+              <div class="bar-val">10%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step-label">Решение</div>
+          <div class="case-step-title">Структура программы</div>
+          <ul class="case-step-items">
+            <li>Модуль 1. Введение — виды камер, оптика, уход</li>
+            <li>Модуль 2. База — настройки, диафрагма, выдержка, ISO</li>
+            <li>Модуль 3. Свет и цвет — физика, температура, студия</li>
+            <li>Модуль 4. Съёмка — жанры, композиция, работа с моделью</li>
+            <li>Модуль 5. Постпродакшн — Lightroom, Photoshop, CapCut</li>
+          </ul>
+          <div style="margin-top: 16px; padding: 14px; background: var(--accent-light); border-radius: var(--r-sm); border: 1px solid rgba(27,63,110,0.15);">
+            <div style="font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 4px;">Итог программы</div>
+            <div style="font-size: 13px; color: var(--accent); line-height: 1.5;">Студент выходит с портфолио, умением снимать в ручном режиме и грамотной обработкой</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2 -->
+    <div class="case-card fade-in">
+      <div class="case-header">
+        <div>
+          <div class="in-dev-banner">В разработке</div>
+          <div class="case-badge" style="margin-top: 6px;">✦ Онлайн-курс · Асинхронный</div>
+          <h3 class="case-title">«Это не мудборд, это я»</h3>
+          <p class="case-desc">Курс по стилизации и авторскому стилю для фотографов. Аудитория: начинающие фотографы, блогеры, SMM-специалисты. Задача — найти авторский стиль за 3 месяца.</p>
+          <div class="taxonomy-row">
+            <span class="tax-chip tax-1">Асинхронный</span>
+            <span class="tax-chip tax-2">Авторский стиль</span>
+            <span class="tax-chip tax-3">3 месяца</span>
+          </div>
+        </div>
+        <div class="case-kpis">
+          <div class="case-kpi">
+            <span class="case-kpi-num">4</span>
+            <span class="case-kpi-label">темы от эксперта</span>
+          </div>
+          <div class="case-kpi">
+            <span class="case-kpi-num">6+</span>
+            <span class="case-kpi-label">доп. материалов</span>
+          </div>
+          <div class="case-kpi">
+            <span class="case-kpi-num">→</span>
+            <span class="case-kpi-label">в разработке</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-step">
+          <div class="case-step-label">Задача</div>
+          <div class="case-step-title">Что нужно решить</div>
+          <ul class="case-step-items">
+            <li>Фотографы «стреляют» без концепции и стиля</li>
+            <li>Нет понимания авторского почерка</li>
+            <li>Хотят узнаваемости в портфолио и соцсетях</li>
+            <li>Нужно научить стилизовать кадр осознанно</li>
+          </ul>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step-label">Структура</div>
+          <div class="case-step-title">Темы программы</div>
+          <ul class="case-step-items">
+            <li>Обзор жанров фотографии от эксперта</li>
+            <li>Составляющие авторского стиля</li>
+            <li>Авторская обработка и цветокоррекция</li>
+            <li>Продвижение и личный бренд фотографа</li>
+          </ul>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step-label">Материалы</div>
+          <div class="case-step-title">Дополнительные ресурсы</div>
+          <ul class="case-step-items">
+            <li>Тест на определение архетипа</li>
+            <li>Большой тест на выбор жанра</li>
+            <li>Архив старых журналов archive.org</li>
+            <li>Приложения для планирования ленты</li>
+            <li>Чек-лист форматов изображений для соцсетей</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3 — Tests -->
+    <div class="case-card fade-in">
+      <div class="case-header">
+        <div>
+          <div class="case-badge">✦ Оценивание · Таксономия Блума</div>
+          <h3 class="case-title">Система тестирования: История метрополитена</h3>
+          <p class="case-desc">Разработка тестовых заданий по уроку об истории строительства первой линии московского метро. Применена таксономия Блума: знание, понимание, применение.</p>
+          <div class="taxonomy-row">
+            <span class="tax-chip tax-1">Знание</span>
+            <span class="tax-chip tax-2">Понимание</span>
+            <span class="tax-chip tax-3">Применение</span>
+          </div>
+        </div>
+        <div class="case-kpis">
+          <div class="case-kpi">
+            <span class="case-kpi-num">3</span>
+            <span class="case-kpi-label">уровня Блума</span>
+          </div>
+          <div class="case-kpi">
+            <span class="case-kpi-num">5+</span>
+            <span class="case-kpi-label">вопросов на урок</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <div class="case-step">
+          <div class="case-step-label">Уровень: знание</div>
+          <div class="case-step-title">Пример задания</div>
+          <div style="margin-top: 12px; padding: 14px; background: var(--gray-100); border-radius: var(--r-sm); font-size: 13px; color: var(--graphite); border-left: 3px solid var(--accent);">
+            «Когда был организован Метрострой?»
+          </div>
+          <ul class="case-step-items" style="margin-top: 10px;">
+            <li>Июнь 1931</li>
+            <li>Июль 1931 ← правильный</li>
+            <li>Август 1931</li>
+            <li>Сентябрь 1931</li>
+          </ul>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step-label">Уровень: понимание</div>
+          <div class="case-step-title">Пример задания</div>
+          <div style="margin-top: 12px; padding: 14px; background: var(--gray-100); border-radius: var(--r-sm); font-size: 13px; color: var(--graphite); border-left: 3px solid var(--emerald);">
+            «Какие последствия при выпуске плывуна в котловане?»
+          </div>
+          <ul class="case-step-items" style="margin-top: 10px;">
+            <li>Просадка грунта</li>
+            <li>Просадка + трещины в зданиях</li>
+            <li>Просадка + трещины + риск обрушения</li>
+            <li>Всё перечисленное ← правильный</li>
+          </ul>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step-label">Принцип разработки</div>
+          <div class="case-step-title">Методология оценивания</div>
+          <ul class="case-step-items">
+            <li>Вопросы привязаны к конкретным задачам урока</li>
+            <li>Каждый вопрос — на конкретный образовательный результат</li>
+            <li>Дистракторы подобраны логично (не случайные)</li>
+            <li>Уровень сложности нарастает от вопроса к вопросу</li>
+          </ul>
+          <div style="margin-top: 14px; padding: 14px; background: var(--emerald-light); border-radius: var(--r-sm); border: 1px solid rgba(15,110,86,0.2);">
+            <div style="font-size: 12px; color: var(--emerald); font-weight: 500; margin-bottom: 4px;">Принцип выстраивания</div>
+            <div style="font-size: 13px; color: var(--emerald); line-height: 1.5;">Тест проверяет не только факты, но и понимание причинно-следственных связей</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPETENCIES -->
+<section id="competencies">
+  <div class="container">
+    <div class="section-tag">Компетенции</div>
+    <h2 class="section-title">Чем владею</h2>
+    <p class="section-desc">Полный цикл — от анализа задачи до готовой структуры курса с заданиями, тестами и методологическим обоснованием каждого решения.</p>
+
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <div class="comp-title">Анализ брифа</div>
+        <div class="comp-desc">Переформулировка образовательных целей, выявление болей аудитории, декомпозиция результатов обучения</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Целевая аудитория</span>
+          <span class="comp-tag">Образовательные цели</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        </div>
+        <div class="comp-title">Проектирование логики</div>
+        <div class="comp-desc">Выбор типа логического построения (спираль, линейное, от результата) и методологических технологий с обоснованием</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Педагогический дизайн</span>
+          <span class="comp-tag">SSDL</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="comp-title">Структурирование программ</div>
+        <div class="comp-desc">Разбивка на модули и уроки, определение форматов, продолжительности, целей и артефактов каждого занятия</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Модульность</span>
+          <span class="comp-tag">Учебный план</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="comp-title">Разработка тестов</div>
+        <div class="comp-desc">Создание оценочных заданий по таксономии Блума: знание, понимание, применение, анализ — с привязкой к образовательным результатам</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Таксономия Блума</span>
+          <span class="comp-tag">Тестирование</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="comp-title">Управление форматами</div>
+        <div class="comp-desc">Подбор тактических технологий: вебинар, видеоурок, лонгрид, интерактивные задания — с обоснованием под аудиторию и задачу</div>
+        <div class="comp-tags">
+          <span class="comp-tag">EdTech-форматы</span>
+          <span class="comp-tag">LMS</span>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="comp-title">Систематизация контента</div>
+        <div class="comp-desc">Работа с экспертным материалом: структурирование, иерархизация, выявление ключевых тем и дополнительных блоков</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Контентная архитектура</span>
+          <span class="comp-tag">Аудит тем</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <div class="container">
+    <div class="section-tag">Результаты</div>
+    <h2 class="section-title">Аналитика в цифрах</h2>
+    <p class="section-desc">Работа методиста — это данные: сколько программ, сколько часов, сколько решений обосновано и задокументировано.</p>
+
+    <div class="dash-grid">
+      <div class="dash-card">
+        <div class="dash-num">2<span>шт</span></div>
+        <div class="dash-label">Полных образовательных программы</div>
+        <div class="dash-trend">Одна ещё в разработке</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-num">5<span>мод</span></div>
+        <div class="dash-label">Модулей в завершённом курсе</div>
+        <div class="dash-trend">С целями и оцениванием</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-num">18<span>+</span></div>
+        <div class="dash-label">Образовательных результатов прописано</div>
+        <div class="dash-trend">С декомпозицией по навыкам</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-num">3<span>ур</span></div>
+        <div class="dash-label">Уровня таксономии Блума применено</div>
+        <div class="dash-trend">Знание / понимание / применение</div>
+      </div>
+    </div>
+
+    <div class="dash-wide">
+      <div>
+        <div class="dash-section-title">Инструменты и форматы</div>
+        <div class="tools-list">
+          <div class="tool-item">
+            <div class="status-dot dot-blue"></div>
+            <div class="tool-name">Excel / Google Sheets</div>
+            <div class="tool-type">Анализ и структура</div>
+          </div>
+          <div class="tool-item">
+            <div class="status-dot dot-green"></div>
+            <div class="tool-name">Таксономия Блума</div>
+            <div class="tool-type">Оценивание</div>
+          </div>
+          <div class="tool-item">
+            <div class="status-dot dot-amber"></div>
+            <div class="tool-name">SSDL модель</div>
+            <div class="tool-type">Методология</div>
+          </div>
+          <div class="tool-item">
+            <div class="status-dot dot-blue"></div>
+            <div class="tool-name">LMS-платформы</div>
+            <div class="tool-type">Размещение контента</div>
+          </div>
+          <div class="tool-item">
+            <div class="status-dot dot-green"></div>
+            <div class="tool-name">Lightroom / Photoshop</div>
+            <div class="tool-type">Экспертная область</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="dash-section-title">Уровень владения</div>
+        <div class="skill-row">
+          <div class="skill-label">Педагогический дизайн</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          <div class="skill-pct">90%</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Анализ аудитории</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+          <div class="skill-pct">88%</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Структурирование курсов</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+          <div class="skill-pct">92%</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Разработка оценивания</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          <div class="skill-pct">85%</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Работа с экспертами</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          <div class="skill-pct">80%</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">Визуализация данных</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+          <div class="skill-pct">75%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" style="background: var(--white);">
+  <div class="container">
+    <div style="max-width: 640px; margin: 0 auto; text-align: center;">
+      <div class="section-tag" style="justify-content: center;">Контакт</div>
+      <h2 class="section-title" style="text-align: center;">Есть задача?<br>Разберём вместе</h2>
+      <p class="section-desc" style="margin: 0 auto 40px; text-align: center;">
+        Занимаюсь разработкой образовательных программ: от брифа до готовой структуры с заданиями. Готова обсудить новые проекты.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:methodist@example.com" class="btn-primary">Написать письмо</a>
+        <a href="#cases" class="btn-ghost">Посмотреть кейсы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Методист образовательных программ</div>
+      <div class="footer-tagline">Архитектура обучения · Педагогический дизайн</div>
+    </div>
+    <div class="footer-links">
+      <a href="#approach">Подход</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#competencies">Компетенции</a>
+      <a href="#contact">Контакт</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Animate bars when visible
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill, .skill-fill').forEach(bar => {
+        const w = bar.style.width;
+        bar.style.width = '0%';
+        setTimeout(() => { bar.style.width = w; }, 100);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.case-viz, .dash-wide').forEach(el => barObserver.observe(el));
+</script>
+</body>
+</html>
